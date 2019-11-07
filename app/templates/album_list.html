@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 {% for album in albums %}
-    <div class="card m-5">
-        <div class="card-body">
-            <h2 class="card-title">{{ album.title }}</h2>
-            <p>by {{ album.artist_name }} </p>
-            <p>{{ album.song_set.all.count }} tracks</p>
-            <a href="{% url 'album_detail' album.id %}" class="card-link">Album Details</a>
-        </div>
+<div class="card m-5">
+    <div class="card-body">
+        <h2 class="card-title">{{ album.title }}</h2>
+        <p>by {{ album.artist_name }} </p>
+        <p>{{ album.song_set.all.count }} tracks</p>
+        <a href="{% url 'album_detail' album.id %}" class="card-link">Album Details</a>
     </div>
+</div>
 {% endfor %}
 {% endblock content %}
